@@ -1,0 +1,1052 @@
+1
+00:00:00,020 --> 00:00:04,340
+Hello welcome to a video about
+
+2
+00:00:07,560 --> 00:00:08,760
+prototypes
+
+3
+00:00:08,760 --> 00:00:14,880
+So first. I should say right now. You should probably turn this off and go [to] something else because I'm about two particular
+
+4
+00:00:15,490 --> 00:00:20,070
+Things I don't really entirely understand and also a little bit
+
+5
+00:00:20,070 --> 00:00:25,109
+You know you could kind of make the arguments obsolete or a little passe or you know why aren't you talking about yet, six?
+
+6
+00:00:25,109 --> 00:00:29,009
+The new verb or this epiphany sounds it's very long the new version of Javascript
+
+7
+00:00:29,010 --> 00:00:32,340
+So what I'm going to attempt to do I made a coding challenge earlier today?
+
+8
+00:00:32,340 --> 00:00:36,479
+You can go a link to it [from] this video. It was a coding challenge
+
+9
+00:00:36,480 --> 00:00:40,110
+I'm just going to show it to you actually should have had this up it was a
+
+10
+00:00:41,379 --> 00:00:43,379
+creating the word to train
+
+11
+00:00:43,540 --> 00:00:48,239
+Out of little dots, and then as I move the mouse [around] the little dots would move and then they would come back
+
+12
+00:00:48,239 --> 00:00:55,259
+So I made this coding challenge, and I used a particular bit of syntax where I created objects and attached methods or functions
+
+13
+00:00:55,930 --> 00:01:00,809
+To the objects prototype and so I wanted to try to make a video to at least cover
+
+14
+00:01:00,910 --> 00:01:03,779
+what is a prototype in Javascript and
+
+15
+00:01:03,850 --> 00:01:09,449
+Why is it kind of relevant or why might you use it and how does it relate to this concept of inheritance and loop?
+
+16
+00:01:09,729 --> 00:01:11,729
+maybe also this
+
+17
+00:01:14,290 --> 00:01:16,290
+concept of
+
+18
+00:01:17,680 --> 00:01:23,699
+Polymorphism, okay, whatever. I got [to] workshop this so this could use some work, but I am trying try new stuff new materials
+
+19
+00:01:23,700 --> 00:01:25,700
+Yeah, my doing not so great, okay
+
+20
+00:01:26,680 --> 00:01:29,699
+So what is the project so first I'm going to just sort of work?
+
+21
+00:01:29,700 --> 00:01:33,930
+I'm going to close this and I'm going to come to some code and in this code
+
+22
+00:01:34,270 --> 00:01:36,600
+I'm just going to I'm going to write a constructor function
+
+23
+00:01:36,600 --> 00:01:39,089
+I could probably start further back
+
+24
+00:01:39,250 --> 00:01:43,259
+But I'm coming with [some] through a baseline of maybe you've watched some of my other tutorials
+
+25
+00:01:43,299 --> 00:01:46,409
+And you've seen me create objects with a constructor function
+
+26
+00:01:47,079 --> 00:01:52,559
+so a constructor function, and I will talk about yet six and classes towards the end of this video, so
+
+27
+00:01:53,470 --> 00:01:55,709
+Before you start typing in your complaints
+
+28
+00:01:56,350 --> 00:02:01,649
+Why aren't you mentioning year six in classes okay and function and I'm going [to] say there's a particle
+
+29
+00:02:01,869 --> 00:02:03,840
+I'm going to use the particle actually [night] none
+
+30
+00:02:03,840 --> 00:02:11,489
+It's like particle a function particle this dot X equals 100 this dot Y equals 99
+
+31
+00:02:12,010 --> 00:02:16,140
+So I'm the idea this constructor function is I can create an object
+
+32
+00:02:16,810 --> 00:02:18,340
+that has
+
+33
+00:02:18,340 --> 00:02:24,960
+Those two properties associated with it, an x property and a y property and this keyword what Javascript knows?
+
+34
+00:02:25,270 --> 00:02:28,320
+that if I ever say, var p equals new
+
+35
+00:02:29,560 --> 00:02:31,120
+Particle
+
+36
+00:02:31,120 --> 00:02:32,950
+the New Keywords
+
+37
+00:02:32,950 --> 00:02:40,589
+Indicates to Javascript that aha that function right that you wrote is not a regular [b]. It all functions are the thing [if]
+
+38
+00:02:41,560 --> 00:02:44,369
+It's a function. It's a function if the function if the function is the function it's a function
+
+39
+00:02:44,710 --> 00:02:48,809
+but functions can be executed in a slightly different way as
+
+40
+00:02:49,630 --> 00:02:57,359
+constructor function if you [use] the New Keyword the New Keyword says execute that function as a constructor function meaning make a new object and
+
+41
+00:02:57,850 --> 00:02:59,080
+assign
+
+42
+00:02:59,080 --> 00:03:01,169
+that object to the [keyword] this
+
+43
+00:03:01,810 --> 00:03:07,470
+So it's binding the context of the code that's happening inside that function to the keyword this point
+
+44
+00:03:07,470 --> 00:03:12,119
+Oh, I think we need a whole video about the keyword this I think I've covered it mentioned it before
+
+45
+00:03:12,120 --> 00:03:15,240
+But this is this keyword of Javascript that can be
+
+46
+00:03:15,490 --> 00:03:19,529
+Kind of pointed through the current context point of the different things based on what you're doing and here
+
+47
+00:03:19,530 --> 00:03:22,649
+I want to make a new object, so I need something to point to it. I'm going to use this
+
+48
+00:03:23,500 --> 00:03:25,739
+Okay, so I'm making a new object
+
+49
+00:03:26,260 --> 00:03:33,029
+Now let me actually do this rather instead of in the code. Let me actually just go to the Javascript console itself and
+
+50
+00:03:33,580 --> 00:03:39,719
+I've got that code loaded in the background so I can do things like [var] [p] equals new particle and
+
+51
+00:03:40,360 --> 00:03:45,449
+We're going to see now if I look closely at that object there it is
+
+52
+00:03:45,450 --> 00:03:50,070
+It's a particle object and has [an] x property and a wide property
+
+53
+00:03:51,580 --> 00:03:54,899
+What else does it have well it has this?
+
+54
+00:03:55,630 --> 00:04:01,919
+Proto property we need to object, so let's come back to that in a moment. Okay. [we're] to come back to that in a moment
+
+55
+00:04:02,620 --> 00:04:09,330
+Hold on hold on okay now. [I'm] going to go and I'm going to say something like this dot show equals function
+
+56
+00:04:12,430 --> 00:04:14,430
+[yes] equals function
+
+57
+00:04:15,269 --> 00:04:18,479
+You know this dot point? Oh?
+
+58
+00:04:19,930 --> 00:04:21,209
+Sorry, I held off my case
+
+59
+00:04:21,209 --> 00:04:21,899
+I'm in P5
+
+60
+00:04:21,899 --> 00:04:27,450
+So I'm going to call the point function this out x this not y so like I'm going to add a function to object
+
+61
+00:04:28,150 --> 00:04:30,720
+Where I draw it as a point
+
+62
+00:04:31,150 --> 00:04:33,570
+So and actually what I'm going to do is I would say var p
+
+63
+00:04:33,970 --> 00:04:37,890
+Just one wants to keep typing on the console P equals new particle
+
+64
+00:04:38,530 --> 00:04:41,700
+So now I'm going to load reload the page. I'm [going] [to] type P again
+
+65
+00:04:42,250 --> 00:04:46,890
+So now I have come on well, [okay] something went wrong [here]. Oh there it is. Sorry
+
+66
+00:04:48,250 --> 00:04:54,119
+It's there so now it has three properties show which is a function. You can sort of see that here
+
+67
+00:04:54,120 --> 00:04:58,320
+And there's other stuff associated with that. Oh so much to talk about we could be here forever
+
+68
+00:04:58,600 --> 00:05:03,420
+We won't talk about it all and x property in a y property now. Let's think about this for a second
+
+69
+00:05:03,420 --> 00:05:05,420
+I'm going to make another particle
+
+70
+00:05:08,170 --> 00:05:11,729
+bar P2 equals New Particle P2 now
+
+71
+00:05:14,080 --> 00:05:17,879
+[both] of these particles of oh boy, I've got this computer here
+
+72
+00:05:20,290 --> 00:05:21,970
+Okay
+
+73
+00:05:21,970 --> 00:05:23,970
+both of these particles have
+
+74
+00:05:24,580 --> 00:05:28,679
+An x and a y proper in this make sense right they should each [have] their own
+
+75
+00:05:28,840 --> 00:05:33,030
+X&Y property because I might say p 2 x plus plus
+
+76
+00:05:33,610 --> 00:05:35,440
+right and now
+
+77
+00:05:35,440 --> 00:05:36,820
+p 2
+
+78
+00:05:36,820 --> 00:05:42,330
+Has its x property is its x has moved to 101 but I don't want p to have moved
+
+79
+00:05:42,330 --> 00:05:44,729
+I want to be able to treat those properties of it
+
+80
+00:05:45,160 --> 00:05:51,960
+Individually those for this data of these particles where they live on the screen, so it makes a lot of sense that [those] would be
+
+81
+00:05:52,960 --> 00:05:57,809
+Attached to the new object that was made in the constructor function, but let's think about this
+
+82
+00:05:58,960 --> 00:06:01,020
+Do they really each need their own?
+
+83
+00:06:01,660 --> 00:06:03,660
+individual show function
+
+84
+00:06:03,940 --> 00:06:06,630
+Couldn't I just have a show function
+
+85
+00:06:06,640 --> 00:06:09,749
+That was just kind of living somewhere that I could say hey
+
+86
+00:06:09,910 --> 00:06:11,320
+Particles when it's time to show
+
+87
+00:06:11,320 --> 00:06:16,920
+Go and grab that function you could both use the same show function because you're both going to be displayed as a point you'll use
+
+88
+00:06:16,920 --> 00:06:20,189
+[your] own data to show yourself at different places on the screen
+
+89
+00:06:20,190 --> 00:06:21,090
+maybe with different colors
+
+90
+00:06:21,090 --> 00:06:26,880
+But you don't actually need each new show function and right now when I make two particles to each get their own X&Y
+
+91
+00:06:27,030 --> 00:06:30,839
+Which they should and they each get their own show function which works, but is a little bit unnecessary
+
+92
+00:06:31,600 --> 00:06:36,510
+so how can I possibly make this a bit more efficient and I'm kind of backing into the concept of
+
+93
+00:06:36,750 --> 00:06:41,100
+Like this is normally where you would start, but this is one reason. Why it's useful
+
+94
+00:06:41,100 --> 00:06:47,070
+I can instead say forget about having a function defined here. I
+
+95
+00:06:48,070 --> 00:06:53,730
+Can write some very strange-looking code particle dot prototype dot show equals function?
+
+96
+00:06:56,020 --> 00:07:01,440
+So now and I'm going to do the same thing. I'm [just] going to put that code in there and
+
+97
+00:07:03,400 --> 00:07:10,650
+Now we are going to look at what does this particle look like in the console
+
+98
+00:07:13,540 --> 00:07:15,070
+p
+
+99
+00:07:15,070 --> 00:07:19,320
+The particle now has an excellent. What happened to the show function
+
+100
+00:07:20,260 --> 00:07:22,260
+It's down here. [oh]
+
+101
+00:07:23,110 --> 00:07:26,730
+Boy, so now we've now we've lost it, and I think I need the white support
+
+102
+00:07:26,770 --> 00:07:28,799
+This is the moment where I think we need the white board
+
+103
+00:07:30,190 --> 00:07:32,190
+Okay, I'm over here at the white Board
+
+104
+00:07:32,770 --> 00:07:35,940
+I'm walking very awkwardly not so sure what I'm going to draw yet
+
+105
+00:07:35,940 --> 00:07:39,149
+I'm feeling a little nervous here because I don't know this is where it gets a little bit tricky
+
+106
+00:07:39,640 --> 00:07:43,559
+So what I'm suggesting here is this object [all]?
+
+107
+00:07:43,900 --> 00:07:49,169
+Objects [P1] has an x and has a y now I could also add a show function
+
+108
+00:07:49,330 --> 00:07:53,189
+But I could also just add a prototype and that
+
+109
+00:07:54,430 --> 00:07:56,729
+prototype is going to point to
+
+110
+00:07:58,360 --> 00:07:59,770
+Particle
+
+111
+00:07:59,770 --> 00:08:01,770
+dot prototype and
+
+112
+00:08:02,020 --> 00:08:04,979
+Particles Prototype has a show function
+
+113
+00:08:05,260 --> 00:08:11,999
+So this is kind of what's often referred to as the prototype chain so it's big although the chain is it's very long yet
+
+114
+00:08:12,000 --> 00:08:15,269
+[I] really want to show how this can then be changed further and further and further
+
+115
+00:08:16,300 --> 00:08:18,160
+so this
+
+116
+00:08:18,160 --> 00:08:19,240
+is
+
+117
+00:08:19,240 --> 00:08:22,710
+The [pokes] and that's worth getting show, so now if I say
+
+118
+00:08:23,229 --> 00:08:28,019
+P2 and I have an x and a y and a prototype
+
+119
+00:08:29,919 --> 00:08:31,978
+this is also pointing to
+
+120
+00:08:32,500 --> 00:08:36,599
+particles a prototype so if I say P1 dot show
+
+121
+00:08:37,000 --> 00:08:39,599
+It looks up is it in here somewhere
+
+122
+00:08:39,849 --> 00:08:46,169
+Nope, if it was it would execute the show something I could override within the prototype by having this part of on its own
+
+123
+00:08:46,850 --> 00:08:51,740
+Will show function. I don't know why I would do that, but you could and maybe you can [take] [it] why not?
+
+124
+00:08:53,220 --> 00:09:00,649
+[here] go look in the prototype there it [is] so this object is going to get functions that are beyond the program now
+
+125
+00:09:01,380 --> 00:09:08,959
+Strangely, not what I'm going to do for a brief moment is leave this here and show you a reason why this can actually be
+
+126
+00:09:09,089 --> 00:09:10,740
+Incredibly powerful
+
+127
+00:09:10,740 --> 00:09:11,660
+That's the right word
+
+128
+00:09:11,660 --> 00:09:18,769
+But incredibly useful as a Javascript programmer when you're using existing javascript objects that come from other libraries
+
+129
+00:09:19,139 --> 00:09:21,139
+so for example
+
+130
+00:09:23,009 --> 00:09:26,599
+Am I over here now? Yes for example. Let's say
+
+131
+00:09:28,290 --> 00:09:32,930
+you you want to use okay a good example is this array is a good example of this but
+
+132
+00:09:33,569 --> 00:09:35,569
+I'm going to use the
+
+133
+00:09:35,970 --> 00:09:39,680
+the P5 vector object so let's say
+
+134
+00:09:41,490 --> 00:09:43,490
+you you have a
+
+135
+00:09:44,339 --> 00:09:46,669
+You have a vector. I'm going to say
+
+136
+00:09:47,819 --> 00:09:53,929
+I'm going to make this a global variable just in case I don't look at it in the console V equals create vector
+
+137
+00:09:54,269 --> 00:09:56,599
+You know one cut three comma four
+
+138
+00:09:57,630 --> 00:10:05,059
+Now V has functions like and so if I go to the console and hit refresh I can say V mag
+
+139
+00:10:06,029 --> 00:10:11,599
+The magnitude of that vector is 5 it's a 3 4 5 triangle actually if you look at the sides and the hypotenuse
+
+140
+00:10:11,730 --> 00:10:14,750
+That's the magnitude of that vector now. What if I wanted to say?
+
+141
+00:10:15,870 --> 00:10:21,139
+V dot. What is the magnitude actually typed is the function? What if I wanted to just?
+
+142
+00:10:22,290 --> 00:10:23,970
+double the values of that vector
+
+143
+00:10:23,970 --> 00:10:26,449
+so I know I could say V multiplied by 2
+
+144
+00:10:26,880 --> 00:10:30,109
+That's a [ways] that you can actually double the values of a vector
+
+145
+00:10:30,110 --> 00:10:36,019
+And you can see now it's 6 and 8 instead of 3 and 4 but what if I wanted I feel like the vector object
+
+146
+00:10:36,180 --> 00:10:38,060
+Because I'm going to do this a lot by program
+
+147
+00:10:38,060 --> 00:10:41,869
+I just want to be able to say V double well of course I'm going to get error that says
+
+148
+00:10:42,269 --> 00:10:45,258
+uncaught type error V double where is
+
+149
+00:10:46,139 --> 00:10:48,139
+the multiply function
+
+150
+00:10:48,600 --> 00:10:51,259
+Let's look at the V let's look at P5 vector
+
+151
+00:10:52,019 --> 00:10:57,438
+Right let's look here all of these functions are in P5 dot vector
+
+152
+00:10:57,779 --> 00:11:02,349
+Prototype all of that is down here. This is [all] [the] stuff listing. What's in the prototype?
+
+153
+00:11:03,440 --> 00:11:09,429
+So and I got to talk about what this underscore proto thing is but down the things listed below are part of the prototype these
+
+154
+00:11:09,430 --> 00:11:15,669
+are the properties specific to that actual object instance the object itself not part of the prototype which is sort of a
+
+155
+00:11:15,860 --> 00:11:17,919
+shared amount of functions for all
+
+156
+00:11:18,470 --> 00:11:20,470
+objects that are created from that prototype
+
+157
+00:11:21,470 --> 00:11:24,250
+So what if I want to add something to this well?
+
+158
+00:11:24,250 --> 00:11:28,029
+This is not something you could normally do in a lot of other programming environments
+
+159
+00:11:28,029 --> 00:11:31,779
+Oh, I got this class or this [object] or this thing. I'm just going to modify it. It's a programmer
+
+160
+00:11:32,329 --> 00:11:35,859
+No problem. Well guess what Javascript you can I could say?
+
+161
+00:11:37,760 --> 00:11:40,510
+P5 Vector dot Prototype
+
+162
+00:11:41,480 --> 00:11:43,959
+Equals. Oh, sorry dot double
+
+163
+00:11:44,930 --> 00:11:47,829
+Equals function, and what would I do in that function?
+
+164
+00:11:47,829 --> 00:11:54,999
+I could say this dot x because whatever object gets called look at that object x property x equals to
+
+165
+00:11:55,760 --> 00:11:57,380
+This dot y
+
+166
+00:11:57,380 --> 00:12:02,890
+X equals to this dot z because the vectors actually have three components, so now I've actually added
+
+167
+00:12:02,890 --> 00:12:03,470
+I
+
+168
+00:12:03,470 --> 00:12:08,980
+Modified the p5.js library by messing with by adding something to P5 vectors protists that any vector
+
+169
+00:12:09,050 --> 00:12:11,919
+[anytime] in my code in this sketch. Will always now suddenly
+
+170
+00:12:11,920 --> 00:12:13,269
+Have a double function
+
+171
+00:12:13,269 --> 00:12:19,599
+And we can see that because if I hit refresh and I type V and I look at all the functions available in the prototype
+
+172
+00:12:19,820 --> 00:12:23,140
+Suddenly there's a function called double right there. It wasn't there before
+
+173
+00:12:24,410 --> 00:12:27,940
+So I've mostly wrapped up this first video on
+
+174
+00:12:28,880 --> 00:12:29,930
+perfect
+
+175
+00:12:29,930 --> 00:12:33,190
+Yeah, there's lots of little missing pieces here lots of little gaps to fill in
+
+176
+00:12:33,190 --> 00:12:36,969
+I want to and I'm going to do a [follow-up] one which goes a little deeper into
+
+177
+00:12:37,550 --> 00:12:42,459
+Inheritance this idea of [inheritance] and then another one which goes deeper than this other concept known as polymorphism
+
+178
+00:12:42,459 --> 00:12:47,559
+But let's just one thing that we need to figure out here is what was that underscore?
+
+179
+00:12:48,949 --> 00:12:50,449
+proto thing
+
+180
+00:12:50,449 --> 00:12:57,339
+So there's something in Javascript called the prototype chain and right here. I made these objects calling
+
+181
+00:12:59,390 --> 00:13:04,239
+the particle is a constructor function and this assigned actually the
+
+182
+00:13:04,670 --> 00:13:09,760
+this this this made these objects that have the properties x and y with
+
+183
+00:13:10,540 --> 00:13:12,540
+It's from Particle dot prototype
+
+184
+00:13:14,780 --> 00:13:17,440
+But that underscore proto is
+
+185
+00:13:19,130 --> 00:13:23,320
+referring [to] a property of the prototype which is a
+
+186
+00:13:24,830 --> 00:13:31,720
+Pointer in a way a reference up the prototype [chain] and what this actually points to is something called
+
+187
+00:13:32,090 --> 00:13:34,090
+object dot prototype
+
+188
+00:13:35,030 --> 00:13:38,649
+Everything in Javascript everything everything everything arrays functions
+
+189
+00:13:39,320 --> 00:13:43,419
+Everything except for some primitive bar x equals five numbers
+
+190
+00:13:43,420 --> 00:13:48,459
+And you know undefined everything is really an object and all objects
+
+191
+00:13:49,010 --> 00:13:53,920
+Ultimately have a selection of top of the prototype chain where you can mess [around] with all this stuff by like
+
+192
+00:13:54,260 --> 00:14:00,010
+Creating objects with null and like destroying the prototype, but that's a little less practical or relevant to this video all
+
+193
+00:14:00,620 --> 00:14:01,990
+objects if you go all the way up
+
+194
+00:14:01,990 --> 00:14:08,079
+The Prototype chain go get object prototype and there are methods here like there are methods like has own
+
+195
+00:14:08,300 --> 00:14:10,990
+Property which is actually this is [actually] a really easy
+
+196
+00:14:11,450 --> 00:14:18,460
+Interesting thing to look at has own property let us just investigate this function has own property for [a] second so I can say P1
+
+197
+00:14:18,650 --> 00:14:24,340
+Dot has own property because it doesn't that dot property has a property isn't here
+
+198
+00:14:24,340 --> 00:14:29,470
+[oh], let's look up the [prototype] [change] the purpose after outer tech so it's not there. Oh, let's go to object red project
+
+199
+00:14:29,470 --> 00:14:33,160
+Oh, it's there I can execute that function. Let's look what that function does. It's kind of interesting
+
+200
+00:14:33,890 --> 00:14:36,730
+It's very useful so I'm going to say
+
+201
+00:14:37,490 --> 00:14:38,630
+P1
+
+202
+00:14:38,630 --> 00:14:41,200
+Hook oh, just p. Sorry p
+
+203
+00:14:43,700 --> 00:14:45,170
+this incidentally
+
+204
+00:14:45,170 --> 00:14:51,820
+This object prototype is particle Dr.. Auto type, and we can see the function thing. I look it result, so it's automatic
+
+205
+00:14:52,550 --> 00:14:54,320
+property of the prototype
+
+206
+00:14:54,320 --> 00:14:58,659
+Constructor that is set automatically to that particle constructor function
+
+207
+00:14:58,660 --> 00:15:04,209
+That's what happens when you say new the new Keyword says the particles prototype constructor
+
+208
+00:15:04,210 --> 00:15:10,360
+Is that function new particle so you can see here Particles prototype?
+
+209
+00:15:10,880 --> 00:15:13,750
+proto Pointer points to object [dot] prototype
+
+210
+00:15:14,540 --> 00:15:19,839
+and we could see look these are the other functions that come from object dot prototypes like has own property [so]
+
+211
+00:15:19,910 --> 00:15:22,810
+Let me show it what I mean by that I can say p
+
+212
+00:15:23,380 --> 00:15:29,619
+Like let's say [I] say piz well that's undefined. It doesn't exist. It's not a property of particle, and it's [not-it's]
+
+213
+00:15:30,260 --> 00:15:32,260
+So I could say p. Dot has own
+
+214
+00:15:32,930 --> 00:15:34,930
+property
+
+215
+00:15:35,240 --> 00:15:36,950
+z
+
+216
+00:15:36,950 --> 00:15:42,970
+False it is not a property. It's not a property of p. But has own property is a little bit
+
+217
+00:15:42,970 --> 00:15:49,569
+It's not just easy to properties. It's something that you could say that gives you a valid result. What if I say P looks at
+
+218
+00:15:50,090 --> 00:15:54,670
+p has own property x I should get true right look p has a property x
+
+219
+00:15:55,340 --> 00:16:01,600
+Correct but what remember particle I can say p show right that's a function. I could say p
+
+220
+00:16:01,600 --> 00:16:03,600
+dot has own property
+
+221
+00:16:04,520 --> 00:16:06,380
+show
+
+222
+00:16:06,380 --> 00:16:10,570
+False why did I get false the reason why I got false is because
+
+223
+00:16:11,480 --> 00:16:14,079
+Show is a property that's been the prototype
+
+224
+00:16:14,080 --> 00:16:20,590
+So this is a way you could detect if the property is something specific. Just only that is like an individual property of that object
+
+225
+00:16:21,200 --> 00:16:24,009
+Instance or something that's somewhere else in the prototype chain
+
+226
+00:16:24,010 --> 00:16:27,700
+And this is actually useful time if you want to iterate over all the properties [of] an object
+
+227
+00:16:27,950 --> 00:16:33,940
+even with the prototype [chain] you can determine if it's like something [you] want to ignore because it [actually] comes from object prototype because it's
+
+228
+00:16:33,940 --> 00:16:37,269
+Not a has own property of the object itself so I kind of went out a little bit of it
+
+229
+00:16:37,270 --> 00:16:40,690
+I dress in there, but hopefully this lets you see, how do we find something up that?
+
+230
+00:16:41,390 --> 00:16:43,010
+prototype Chain
+
+231
+00:16:43,010 --> 00:16:44,180
+so
+
+232
+00:16:44,180 --> 00:16:48,219
+This is a little bit of what a prototype is. I'm sure I miss p
+
+233
+00:16:48,220 --> 00:16:52,750
+I never I don't know if I like explicitly defined it kind of back into it showing its how you use it and how it's
+
+234
+00:16:52,750 --> 00:16:56,199
+Relevant and where you find it in the console sure I missed a lot of pieces here
+
+235
+00:16:56,200 --> 00:17:01,420
+Which I'll come back to but what I want to look at is what if I want to make other objects?
+
+236
+00:17:01,420 --> 00:17:04,239
+What if I want to put something else what if I want to have?
+
+237
+00:17:04,609 --> 00:17:11,739
+So let's say I have a generic particle object that has all of the physics basic physics of a world that's going to inhabit
+
+238
+00:17:12,020 --> 00:17:17,499
+and what I ultimately want to do is I want to have turtles and fish and
+
+239
+00:17:18,200 --> 00:17:22,210
+Bees and all different kinds of creatures that have lots of their own
+
+240
+00:17:22,760 --> 00:17:27,160
+functions and properties, but they get all their physics stuff from say a
+
+241
+00:17:27,710 --> 00:17:32,379
+Generic Particle object, [how] can I have a you know a turtle?
+
+242
+00:17:33,410 --> 00:17:35,030
+dot prototype
+
+243
+00:17:35,030 --> 00:17:36,840
+Which have a lot of stuff?
+
+244
+00:17:36,840 --> 00:17:41,579
+Turtle, but has all the physics from particle that prototypes that has all the functions from [object-oriented]
+
+245
+00:17:41,580 --> 00:17:46,980
+How can I do something called inheritance? How can I have objects inherit from other objects that I'm defining?
+
+246
+00:17:47,919 --> 00:17:54,269
+Through prototypical inheritance in Javascript, so that's going to be in the next video, but might not come out for a little bit
+
+247
+00:17:54,429 --> 00:17:56,759
+But it will come out eventually maybe you're watching this in the future
+
+248
+00:17:56,760 --> 00:18:00,510
+and they're all there and are I believe them because these videos or disaster, but
+
+249
+00:18:01,330 --> 00:18:07,409
+But so look for it it might be there now. I should mention one again [once] again that
+
+250
+00:18:08,140 --> 00:18:14,309
+what I'm showing, you is a part of the Javascript language from the version that is informally known as
+
+251
+00:18:14,830 --> 00:18:18,960
+Es6 so there's a consortium [Emc] a script Blabbity blah that
+
+252
+00:18:19,390 --> 00:18:25,799
+Determines and specs out the [Javascript] language the interesting complex topic of how that's done and who has a voice there
+
+253
+00:18:25,799 --> 00:18:28,379
+which I think we a separate discussion, but
+
+254
+00:18:29,380 --> 00:18:32,099
+The new and it's actually not even that new at this point
+
+255
+00:18:32,100 --> 00:18:34,140
+But it just you know there's still some browsers
+
+256
+00:18:34,140 --> 00:18:41,939
+don't support it the newest version of Javascript Es6 has a different model and syntax [for] [this] involving something called class and
+
+257
+00:18:42,460 --> 00:18:46,439
+If you have programs as I have in Java or other
+
+258
+00:18:46,990 --> 00:18:52,289
+Classical programming environments, so to speak this is more of like a classical model of inheritance
+
+259
+00:18:52,289 --> 00:18:57,658
+And there's a key bump, so I some point I also want to look at that so in this continuing series
+
+260
+00:18:57,659 --> 00:18:59,909
+But first I want to figure out this prototype stuff
+
+261
+00:18:59,909 --> 00:19:05,759
+I want to get [inherit] also talk about this thing called polymorphism, and I'll show you some examples [that] make use of it, okay
+
+262
+00:19:05,789 --> 00:19:11,849
+thanks for watching this particular video, and I will see you in a future one about prototypes and
+
+263
+00:19:12,399 --> 00:00:00,000
+inheritance
+

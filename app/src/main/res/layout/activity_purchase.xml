@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PurchaseActivity">
+
+    <TextView
+        android:id="@+id/btn_purchase"
+        android:foreground="?selectableItemBackground"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/padding_normal"
+        android:gravity="center_horizontal"
+        android:text="@string/purchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_above="@id/btn_purchase"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Payment Methods"
+            android:textColor="@color/colorPrimary"
+            android:textAllCaps="true"
+            android:paddingStart="@dimen/padding_normal"
+            android:paddingEnd="@dimen/padding_normal"
+            android:paddingTop="@dimen/padding_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/group_payment"
+            android:paddingStart="@dimen/padding_normal"
+            android:paddingEnd="@dimen/padding_normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_ooredoo"
+                android:drawableStart="@drawable/ooredoo"
+                android:padding="@dimen/padding_normal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:onClick="onRadioButtonClicked" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radio_visa"
+                android:drawableStart="@drawable/visa_logo"
+                android:padding="@dimen/padding_normal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:onClick="onRadioButtonClicked" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</RelativeLayout>
